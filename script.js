@@ -28,7 +28,6 @@ document.addEventListener('click', async e => {
     if (e.target.matches('img')) {
         let urlCreated = await fetch(e.target.src)
         let theBlob = await urlCreated.blob()
-        console.log(urlCreated)
 
         let link = document.createElement('a')
         link.href = URL.createObjectURL(theBlob)
