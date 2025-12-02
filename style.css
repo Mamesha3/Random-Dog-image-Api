@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+.container {
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    margin: auto;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.23);
+    padding: 20px 10px;
+}
+#download {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+.img_container {
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-block: 10px 23px;
+    max-height: 400px;
+    overflow-y: scroll;
+    position: relative;
+}
+.img_container::-webkit-scrollbar {
+    width: 6px;  
+}
+.img_container::-webkit-scrollbar-track {
+    background-color: rgba(255, 166, 0, 0.463);
+    border-radius: 10px;
+    color: black;
+}
+.img_container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.404);
+    border-radius: 10px;   
+}
+.img_container::-webkit-scrollbar-thumb:hover {
+    background-color: black;
+}
+.img_container div {
+    display: inline-block;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.484);
+}
+.img_container div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.empty,.empty_text {
+    opacity: 0.2;
+    pointer-events: none;
+    user-select: none;
+    background-color: transparent;
+}
+.empty-container {
+    background-color: transparent;
+    color: black;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+#generate {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -10px;
+    padding: 5px 30px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: orange;
+    color: black;
+    font-weight: 650;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+#generate:active {
+    transform: translateX(-50%) scale(0.9);
+}
+#generate:hover {
+    color: white;
+}
