@@ -1,12 +1,23 @@
 const downBtn = document.querySelector('#download')
 const generateBtn = document.querySelector('#generate')
 
+
+  // to get code click here
+document.querySelector('.code_sign').addEventListener('click',function () {
+      let code = document.querySelector('.code_here')
+      code.classList.toggle('showhere')
+})
+
 //div class "image",  url "https://dog.ceo/api/breeds/image/random"
 
 async function getDoIm() {
-    let res = await fetch("https://dog.ceo/api/breeds/image/random")
-    let data = await res.json()
-    createContainer(data.message)
+    try {
+        let res = await fetch("https://dog.ceo/api/breeds/image/random")
+        let data = await res.json()
+        createContainer(data.message)
+    }catch(e) {
+       alert('Faild to fetch', e)
+    }
 }
 
 function createContainer(some) {
